@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header"
 import { MoveDown, ArrowUpRight } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
+import { WorkCard } from "@/components/WorkCard";
 
 export default function WorkPage() {
   return (
@@ -47,55 +48,22 @@ export default function WorkPage() {
 
       {/* Projects Section */}
       <section className="mx-auto max-w-[1400px] space-y-4 px-6 py-24 md:px-12 lg:px-24">
-        <Link 
+        <WorkCard 
           href="/work/stadia-bluetooth"
-          className="group relative block overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 backdrop-blur-sm transition-all hover:border-zinc-700 hover:bg-zinc-900/80"
-        >
-          <div className="flex items-start justify-between">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-medium md:text-3xl">Stadia Bluetooth</h2>
-              <p className="text-zinc-500">
-                Google, '23 — Giving a second life to over a million controllers.
-              </p>
-            </div>
-            <ArrowUpRight className="h-6 w-6 text-zinc-500 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </div>
-          <div className="mt-8 overflow-hidden rounded-xl border border-zinc-800">
-            <Image
-              src="/placeholder.svg"
-              alt="Stadia Bluetooth Interface"
-              width={1200}
-              height={675}
-              className="w-full"
-            />
-          </div>
-        </Link>
+          title="Stadia Bluetooth"
+          description="Google, '23 — Giving a second life to over a million controllers."
+          imageUrl="/placeholder.svg"
+          imageAlt="Stadia Bluetooth Interface"
+        />
 
-        <Link 
+        <WorkCard 
           href="/work/text-hub-next"
-          className="group relative block overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 backdrop-blur-sm transition-all hover:border-zinc-700 hover:bg-zinc-900/80"
-        >
-          <div className="flex items-start justify-between">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-medium md:text-3xl">Text Hub Next</h2>
-              <p className="text-zinc-500">
-                Discord, '23 — A new way to discover and share text commands.
-              </p>
-            </div>
-            <ArrowUpRight className="h-6 w-6 text-zinc-500 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </div>
-          <div className="mt-8 overflow-hidden rounded-xl border border-zinc-800">
-            <Image
-              src="/placeholder.svg"
-              alt="Text Hub Next Interface"
-              width={1200}
-              height={675}
-              className="w-full"
-            />
-          </div>
-        </Link>
+          title="Text Hub Next"
+          description="Discord, '23 — A new way to discover and share text commands."
+          imageUrl="/placeholder.svg"
+          imageAlt="Text Hub Next Interface"
+        />
       </section>
     </main>
   )
 }
-
